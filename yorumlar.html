@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      padding: 20px;
+      color: #1a5d3d;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="yorumKutusu">Yükleniyor...</div>
+
+  <script>
+    const yorumlar = [
+      "Zeyd Hoca sayesinde eşim 3 gün içinde geri döndü.",
+      "Büyü çözümünden sonra rahatladım, şükürler olsun.",
+      "Rızık açıldı, işlerim yoluna girdi.",
+      "Kayınvalidem bile destek oldu, aile engeli çözüldü.",
+      "Geri geldi, çok mutluyum.",
+      "Gönül yönü bana döndü, Rabbim razı olsun.",
+      "Hiçbir şey yolunda gitmiyordu, şimdi huzur var.",
+      "Soğutma büyüsü bozuldu, eskisi gibi olduk.",
+      "Musallat temizlendi, rahat uyuyorum.",
+      "Zeyd Hoca'nın yöntemiyle sonuç aldım.",
+      "Bağlama işlemi işe yaradı, iletişim düzeldi.",
+      "Kısmet açıldı, iki yerden teklif geldi.",
+      "Allah’ın izniyle evlilik kurtuldu.",
+      "Telefonla hiç ilgilenmezdi, şimdi hep arıyor.",
+      "Ne yapacağımı bilmiyordum, yol gösterdi.",
+      "Gerçekten ilimle çalışılıyor, çok etkilendim.",
+      "Adakla mühürleme sonrası her şey değişti.",
+      "Dua ettik, sabrettik, sonucu aldık.",
+      "İşim gücüm yoluna girdi, bereket geldi.",
+      "Gönlümdeki kişiyle buluştum."
+    ];
+
+    let index = 0;
+    function degistir() {
+      document.getElementById("yorumKutusu").innerText = yorumlar[index];
+      index = (index + 1) % yorumlar.length;
+    }
+
+    degistir();
+    setInterval(degistir, 20000);
+  </script>
+</body>
+</html>
